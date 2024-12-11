@@ -2,6 +2,7 @@
 package com.afranco.views;
 
 
+import com.afranco.ilib.DAOUsersImpl;
 import com.afranco.interfaces.DAOUsers;
 import com.afranco.models.Users;
 
@@ -166,7 +167,19 @@ public class UpUser extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRegistrarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarClienteActionPerformed
+        Users user = new Users();
+        user.setName("Poronga");
+        user.setLastNameP("Choca");
+        user.setLastNameM("Pogo");
+        user.setDomicilio("calle 7 puñaladas-Perú");
+        user.setTel("+56999888777");
         
+        try {
+            DAOUsers dao = new DAOUsersImpl();
+            dao.registrar(user);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
     }//GEN-LAST:event_btnRegistrarClienteActionPerformed
 
 

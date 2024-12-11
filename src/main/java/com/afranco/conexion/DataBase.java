@@ -18,6 +18,7 @@ public class DataBase {
 
     public void Conectar() throws ClassNotFoundException{
         try{
+            System.out.println("Conectado a base de dateiros");
             conexion = DriverManager.getConnection(DB_URL,USER,PASS);
             Class.forName(JDBC_DRIVER); //controlador
         } catch(SQLException ex){
@@ -26,9 +27,11 @@ public class DataBase {
     }
     
     public void Cerrar() throws SQLException{
+        System.out.println("Desconectado de base de datiños");
         if(conexion != null){
             if(!conexion.isClosed()){
                 conexion.close();
+                
             }
         }
     }
