@@ -27,7 +27,7 @@ public class DataBase {
     }
     
     public void Cerrar() throws SQLException{
-        System.out.println("Desconectado de base de datiños");
+        System.out.println("Desconectado de base de datinos");
         if(conexion != null){
             if(!conexion.isClosed()){
                 conexion.close();

@@ -46,7 +46,7 @@ public class Dashboard extends javax.swing.JFrame {
         showJPanel(new Principal());
         
     }
-    private static void showJPanel(JPanel pl){
+    public static void showJPanel(JPanel pl){
         pl.setSize(750,430);
         pl.setLocation(0,0);
         
@@ -352,7 +352,7 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_btnPrestamosActionPerformed
 
     private void btnUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUsuariosActionPerformed
-        showJPanel(new UsersPanel());
+        showJPanel(new UsersPanel(this)); //se agrego el this para no tener conflicto al ser llamado a otro lado la instnacia.
     }//GEN-LAST:event_btnUsuariosActionPerformed
 
     private void btnLibrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLibrosActionPerformed

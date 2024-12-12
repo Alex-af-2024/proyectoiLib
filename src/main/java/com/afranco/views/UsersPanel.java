@@ -1,10 +1,14 @@
 package com.afranco.views;
+
+import com.afranco.ilib.Dashboard;
+
 public class UsersPanel extends javax.swing.JPanel {
-
-    public UsersPanel() {
+    
+    public UsersPanel(Dashboard dashboard) {///
         initComponents();
+        this.dashboard = dashboard;
     }
-
+    private Dashboard dashboard;
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -148,7 +152,7 @@ public class UsersPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnUsuarioNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUsuarioNuevoActionPerformed
-       
+       dashboard.showJPanel(new UpUser());
     }//GEN-LAST:event_btnUsuarioNuevoActionPerformed
 
 

@@ -177,9 +177,11 @@ public class UpUser extends javax.swing.JPanel {
         try {
             DAOUsers dao = new DAOUsersImpl();
             dao.registrar(user);
+            System.out.println("Usuario registrado 1");
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+        
     }//GEN-LAST:event_btnRegistrarClienteActionPerformed
 
 

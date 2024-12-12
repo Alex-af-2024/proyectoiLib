@@ -18,7 +18,12 @@ public class DAOUsersImpl extends DataBase implements DAOUsers{
             st.setString(3, user.getLastNameM());
             st.setString(4, user.getDomicilio());
             st.setString(5, user.getTel());
+            st.executeUpdate();
+            System.out.println("Registrado 2");
         } catch (Exception e) {
+            throw e;
+        }finally{
+            this.Cerrar();
         }
     }
 
