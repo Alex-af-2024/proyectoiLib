@@ -46,7 +46,7 @@ public class Dashboard extends javax.swing.JFrame {
         showJPanel(new Principal());
         
     }
-    private void showJPanel(JPanel pl){
+    private static void showJPanel(JPanel pl){
         pl.setSize(750,430);
         pl.setLocation(0,0);
         
@@ -88,11 +88,11 @@ public class Dashboard extends javax.swing.JFrame {
         mensajeiLib = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         btnPrincipal = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
+        btnPrestamos = new javax.swing.JButton();
+        btnUsuarios = new javax.swing.JButton();
+        btnReportes = new javax.swing.JButton();
+        btnLibros = new javax.swing.JButton();
+        btnDevoluciones = new javax.swing.JButton();
         header = new java.awt.Panel();
         mensaje3 = new javax.swing.JLabel();
         mensajeFecha = new javax.swing.JLabel();
@@ -127,83 +127,83 @@ public class Dashboard extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(21, 101, 192));
-        jButton3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/transferir20x20.png"))); // NOI18N
-        jButton3.setText("Prestamos");
-        jButton3.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
-        jButton3.setBorderPainted(false);
-        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jButton3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jButton3.setIconTextGap(9);
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btnPrestamos.setBackground(new java.awt.Color(21, 101, 192));
+        btnPrestamos.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnPrestamos.setForeground(new java.awt.Color(255, 255, 255));
+        btnPrestamos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/transferir20x20.png"))); // NOI18N
+        btnPrestamos.setText("Prestamos");
+        btnPrestamos.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
+        btnPrestamos.setBorderPainted(false);
+        btnPrestamos.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnPrestamos.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnPrestamos.setIconTextGap(9);
+        btnPrestamos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btnPrestamosActionPerformed(evt);
             }
         });
 
-        jButton4.setBackground(new java.awt.Color(21, 101, 192));
-        jButton4.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/usuario20x20.png"))); // NOI18N
-        jButton4.setText("Usuarios");
-        jButton4.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
-        jButton4.setBorderPainted(false);
-        jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jButton4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jButton4.setIconTextGap(13);
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        btnUsuarios.setBackground(new java.awt.Color(21, 101, 192));
+        btnUsuarios.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnUsuarios.setForeground(new java.awt.Color(255, 255, 255));
+        btnUsuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/usuario20x20.png"))); // NOI18N
+        btnUsuarios.setText("Usuarios");
+        btnUsuarios.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
+        btnUsuarios.setBorderPainted(false);
+        btnUsuarios.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnUsuarios.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnUsuarios.setIconTextGap(13);
+        btnUsuarios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                btnUsuariosActionPerformed(evt);
             }
         });
 
-        jButton6.setBackground(new java.awt.Color(21, 101, 192));
-        jButton6.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(255, 255, 255));
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/formulario-de-llenado20x20.png"))); // NOI18N
-        jButton6.setText("Reportes");
-        jButton6.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
-        jButton6.setBorderPainted(false);
-        jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jButton6.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jButton6.setIconTextGap(14);
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        btnReportes.setBackground(new java.awt.Color(21, 101, 192));
+        btnReportes.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnReportes.setForeground(new java.awt.Color(255, 255, 255));
+        btnReportes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/formulario-de-llenado20x20.png"))); // NOI18N
+        btnReportes.setText("Reportes");
+        btnReportes.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
+        btnReportes.setBorderPainted(false);
+        btnReportes.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnReportes.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnReportes.setIconTextGap(14);
+        btnReportes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                btnReportesActionPerformed(evt);
             }
         });
 
-        jButton5.setBackground(new java.awt.Color(21, 101, 192));
-        jButton5.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/libro-abierto20x20a.png"))); // NOI18N
-        jButton5.setText("Libros");
-        jButton5.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
-        jButton5.setBorderPainted(false);
-        jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jButton5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jButton5.setIconTextGap(14);
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        btnLibros.setBackground(new java.awt.Color(21, 101, 192));
+        btnLibros.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnLibros.setForeground(new java.awt.Color(255, 255, 255));
+        btnLibros.setIcon(new javax.swing.ImageIcon(getClass().getResource("/libro-abierto20x20a.png"))); // NOI18N
+        btnLibros.setText("Libros");
+        btnLibros.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
+        btnLibros.setBorderPainted(false);
+        btnLibros.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnLibros.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnLibros.setIconTextGap(14);
+        btnLibros.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                btnLibrosActionPerformed(evt);
             }
         });
 
-        jButton7.setBackground(new java.awt.Color(21, 101, 192));
-        jButton7.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jButton7.setForeground(new java.awt.Color(255, 255, 255));
-        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/devolver20x20.png"))); // NOI18N
-        jButton7.setText("Devoluciones");
-        jButton7.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
-        jButton7.setBorderPainted(false);
-        jButton7.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jButton7.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jButton7.setIconTextGap(13);
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        btnDevoluciones.setBackground(new java.awt.Color(21, 101, 192));
+        btnDevoluciones.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnDevoluciones.setForeground(new java.awt.Color(255, 255, 255));
+        btnDevoluciones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/devolver20x20.png"))); // NOI18N
+        btnDevoluciones.setText("Devoluciones");
+        btnDevoluciones.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
+        btnDevoluciones.setBorderPainted(false);
+        btnDevoluciones.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnDevoluciones.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnDevoluciones.setIconTextGap(13);
+        btnDevoluciones.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                btnDevolucionesActionPerformed(evt);
             }
         });
 
@@ -217,12 +217,12 @@ public class Dashboard extends javax.swing.JFrame {
             .addGroup(menuLayout.createSequentialGroup()
                 .addGap(41, 41, 41)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(btnPrestamos, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(btnLibros, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(btnReportes, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(btnDevoluciones, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addComponent(btnPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(btnUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         menuLayout.setVerticalGroup(
             menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -235,20 +235,20 @@ public class Dashboard extends javax.swing.JFrame {
                 .addGroup(menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(menuLayout.createSequentialGroup()
                         .addGap(40, 40, 40)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnPrestamos, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(menuLayout.createSequentialGroup()
                         .addGap(160, 160, 160)
-                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnLibros, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(menuLayout.createSequentialGroup()
                         .addGap(200, 200, 200)
-                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnReportes, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(menuLayout.createSequentialGroup()
                         .addGap(80, 80, 80)
-                        .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnDevoluciones, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(btnPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(menuLayout.createSequentialGroup()
                         .addGap(120, 120, 120)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(284, 284, 284))
         );
 
@@ -347,25 +347,25 @@ public class Dashboard extends javax.swing.JFrame {
             initContent();
     }//GEN-LAST:event_btnPrincipalActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void btnPrestamosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPrestamosActionPerformed
         showJPanel(new LendingModel());
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_btnPrestamosActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void btnUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUsuariosActionPerformed
+        showJPanel(new UsersPanel());
+    }//GEN-LAST:event_btnUsuariosActionPerformed
+
+    private void btnLibrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLibrosActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_btnLibrosActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void btnReportesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReportesActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_btnReportesActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
-
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void btnDevolucionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDevolucionesActionPerformed
         showJPanel(new Returns());
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }//GEN-LAST:event_btnDevolucionesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -385,14 +385,14 @@ public class Dashboard extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private java.awt.Panel background;
+    private javax.swing.JButton btnDevoluciones;
+    private javax.swing.JButton btnLibros;
+    private javax.swing.JButton btnPrestamos;
     private javax.swing.JButton btnPrincipal;
-    private java.awt.Panel content;
+    private javax.swing.JButton btnReportes;
+    private javax.swing.JButton btnUsuarios;
+    private static java.awt.Panel content;
     private java.awt.Panel header;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel mensaje1;
     private javax.swing.JLabel mensaje3;

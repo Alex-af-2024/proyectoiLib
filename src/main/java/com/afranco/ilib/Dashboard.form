@@ -101,12 +101,12 @@
                       <EmptySpace min="41" pref="41" max="-2" attributes="0"/>
                       <Component id="jSeparator1" min="-2" pref="175" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="jButton3" min="-2" pref="270" max="-2" attributes="0"/>
-                  <Component id="jButton5" min="-2" pref="270" max="-2" attributes="0"/>
-                  <Component id="jButton6" min="-2" pref="270" max="-2" attributes="0"/>
-                  <Component id="jButton7" min="-2" pref="270" max="-2" attributes="0"/>
+                  <Component id="btnPrestamos" min="-2" pref="270" max="-2" attributes="0"/>
+                  <Component id="btnLibros" min="-2" pref="270" max="-2" attributes="0"/>
+                  <Component id="btnReportes" min="-2" pref="270" max="-2" attributes="0"/>
+                  <Component id="btnDevoluciones" min="-2" pref="270" max="-2" attributes="0"/>
                   <Component id="btnPrincipal" min="-2" pref="270" max="-2" attributes="0"/>
-                  <Component id="jButton4" min="-2" pref="270" max="-2" attributes="0"/>
+                  <Component id="btnUsuarios" min="-2" pref="270" max="-2" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
@@ -120,24 +120,24 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <EmptySpace min="40" pref="40" max="-2" attributes="0"/>
-                              <Component id="jButton3" min="-2" pref="46" max="-2" attributes="0"/>
+                              <Component id="btnPrestamos" min="-2" pref="46" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <EmptySpace min="160" pref="160" max="-2" attributes="0"/>
-                              <Component id="jButton5" min="-2" pref="46" max="-2" attributes="0"/>
+                              <Component id="btnLibros" min="-2" pref="46" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <EmptySpace min="200" pref="200" max="-2" attributes="0"/>
-                              <Component id="jButton6" min="-2" pref="46" max="-2" attributes="0"/>
+                              <Component id="btnReportes" min="-2" pref="46" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <EmptySpace min="80" pref="80" max="-2" attributes="0"/>
-                              <Component id="jButton7" min="-2" pref="46" max="-2" attributes="0"/>
+                              <Component id="btnDevoluciones" min="-2" pref="46" max="-2" attributes="0"/>
                           </Group>
                           <Component id="btnPrincipal" min="-2" pref="46" max="-2" attributes="0"/>
                           <Group type="102" attributes="0">
                               <EmptySpace min="120" pref="120" max="-2" attributes="0"/>
-                              <Component id="jButton4" min="-2" pref="46" max="-2" attributes="0"/>
+                              <Component id="btnUsuarios" min="-2" pref="46" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="284" max="-2" attributes="0"/>
@@ -190,7 +190,7 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPrincipalActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton3">
+            <Component class="javax.swing.JButton" name="btnPrestamos">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="c0" green="65" red="15" type="rgb"/>
@@ -218,10 +218,10 @@
                 <Property name="iconTextGap" type="int" value="9"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPrestamosActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton4">
+            <Component class="javax.swing.JButton" name="btnUsuarios">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="c0" green="65" red="15" type="rgb"/>
@@ -249,10 +249,10 @@
                 <Property name="iconTextGap" type="int" value="13"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnUsuariosActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton6">
+            <Component class="javax.swing.JButton" name="btnReportes">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="c0" green="65" red="15" type="rgb"/>
@@ -280,10 +280,10 @@
                 <Property name="iconTextGap" type="int" value="14"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton6ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnReportesActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton5">
+            <Component class="javax.swing.JButton" name="btnLibros">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="c0" green="65" red="15" type="rgb"/>
@@ -311,10 +311,10 @@
                 <Property name="iconTextGap" type="int" value="14"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton5ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLibrosActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton7">
+            <Component class="javax.swing.JButton" name="btnDevoluciones">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="c0" green="65" red="15" type="rgb"/>
@@ -342,7 +342,7 @@
                 <Property name="iconTextGap" type="int" value="13"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton7ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDevolucionesActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>
@@ -409,6 +409,9 @@
               <Dimension value="[846, 0]"/>
             </Property>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="10"/>
+          </AuxValues>
 
           <Layout>
             <DimensionLayout dim="0">
