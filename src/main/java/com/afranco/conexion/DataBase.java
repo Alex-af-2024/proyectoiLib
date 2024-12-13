@@ -1,4 +1,3 @@
-
 package com.afranco.conexion;
 
 import java.sql.Connection;

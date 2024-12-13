@@ -5,6 +5,10 @@ package com.afranco.views;
 import com.afranco.ilib.DAOUsersImpl;
 import com.afranco.interfaces.DAOUsers;
 import com.afranco.models.Users;
+import java.awt.Color;
+import java.awt.Font;
+import javax.swing.JOptionPane;
+import javax.swing.UIManager;
 
 
 public class UpUser extends javax.swing.JPanel {
@@ -24,17 +28,17 @@ public class UpUser extends javax.swing.JPanel {
         bgUpUser = new java.awt.Panel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        txtNombreclienteR = new javax.swing.JTextField();
-        jSeparator3 = new javax.swing.JSeparator();
         jLabel7 = new javax.swing.JLabel();
-        txtApellidoPClienteR = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
-        txtApellidoMaternoClienteR = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
-        txtDireccionClienteR = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
+        txtNombreclienteR = new javax.swing.JTextField();
+        txtApellidoPClienteR = new javax.swing.JTextField();
+        txtApellidoMaternoClienteR = new javax.swing.JTextField();
+        txtDireccionClienteR = new javax.swing.JTextField();
         txtTelefonoClienteR = new javax.swing.JTextField();
         btnRegistrarCliente = new javax.swing.JButton();
+        jSeparator3 = new javax.swing.JSeparator();
 
         bgUpUser.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
 
@@ -45,8 +49,6 @@ public class UpUser extends javax.swing.JPanel {
         jLabel6.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("Nombre");
-
-        jSeparator3.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
         jLabel7.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 0, 0));
@@ -74,6 +76,8 @@ public class UpUser extends javax.swing.JPanel {
             }
         });
 
+        jSeparator3.setOrientation(javax.swing.SwingConstants.VERTICAL);
+
         javax.swing.GroupLayout bgUpUserLayout = new javax.swing.GroupLayout(bgUpUser);
         bgUpUser.setLayout(bgUpUserLayout);
         bgUpUserLayout.setHorizontalGroup(
@@ -82,41 +86,37 @@ public class UpUser extends javax.swing.JPanel {
                 .addGap(59, 59, 59)
                 .addGroup(bgUpUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(bgUpUserLayout.createSequentialGroup()
-                        .addGroup(bgUpUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(bgUpUserLayout.createSequentialGroup()
-                                .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(268, 268, 268))
-                            .addGroup(bgUpUserLayout.createSequentialGroup()
-                                .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(178, 178, 178))
-                            .addGroup(bgUpUserLayout.createSequentialGroup()
-                                .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(257, 257, 257))
-                            .addGroup(bgUpUserLayout.createSequentialGroup()
-                                .addComponent(txtNombreclienteR, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(bgUpUserLayout.createSequentialGroup()
-                                .addGroup(bgUpUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtApellidoPClienteR, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtApellidoMaternoClienteR, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addComponent(jSeparator3)
-                        .addGap(18, 18, 18)
-                        .addGroup(bgUpUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(bgUpUserLayout.createSequentialGroup()
-                                .addGroup(bgUpUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(222, 222, 222))
-                            .addComponent(btnRegistrarCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(bgUpUserLayout.createSequentialGroup()
-                                .addGroup(bgUpUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtDireccionClienteR, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtTelefonoClienteR, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 0, Short.MAX_VALUE))))
+                        .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(268, 268, 268))
+                    .addGroup(bgUpUserLayout.createSequentialGroup()
+                        .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(178, 178, 178))
+                    .addGroup(bgUpUserLayout.createSequentialGroup()
+                        .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(257, 257, 257))
                     .addGroup(bgUpUserLayout.createSequentialGroup()
                         .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(462, 462, 462)))
+                        .addGap(167, 167, 167))
+                    .addGroup(bgUpUserLayout.createSequentialGroup()
+                        .addGroup(bgUpUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtNombreclienteR, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtApellidoPClienteR, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtApellidoMaternoClienteR, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(bgUpUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(bgUpUserLayout.createSequentialGroup()
+                        .addGroup(bgUpUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(222, 222, 222))
+                    .addComponent(btnRegistrarCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(bgUpUserLayout.createSequentialGroup()
+                        .addGroup(bgUpUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtDireccionClienteR, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtTelefonoClienteR, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(147, 147, 147))
         );
         bgUpUserLayout.setVerticalGroup(
@@ -126,7 +126,6 @@ public class UpUser extends javax.swing.JPanel {
                 .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(32, 32, 32)
                 .addGroup(bgUpUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSeparator3)
                     .addGroup(bgUpUserLayout.createSequentialGroup()
                         .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -139,7 +138,7 @@ public class UpUser extends javax.swing.JPanel {
                         .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtApellidoMaternoClienteR, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(68, 68, 68))
+                        .addGap(101, 101, 101))
                     .addGroup(bgUpUserLayout.createSequentialGroup()
                         .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -150,8 +149,11 @@ public class UpUser extends javax.swing.JPanel {
                         .addComponent(txtTelefonoClienteR, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(55, 55, 55)
                         .addComponent(btnRegistrarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(71, 71, 71)))
-                .addGap(33, 33, 33))
+                        .addGap(104, 104, 104))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bgUpUserLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 405, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -168,18 +170,42 @@ public class UpUser extends javax.swing.JPanel {
 
     private void btnRegistrarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarClienteActionPerformed
         Users user = new Users();
-        user.setName("Poronga");
-        user.setLastNameP("Choca");
-        user.setLastNameM("Pogo");
-        user.setDomicilio("calle 7 puñaladas-Perú");
-        user.setTel("+56999888777");
+        String nombre = txtNombreclienteR.getText();
+        String apellidoP = txtApellidoPClienteR.getText();
+        String apellidoM = txtApellidoMaternoClienteR.getText();
+        String domicilio = txtDireccionClienteR.getText();
+        String telefono = txtTelefonoClienteR.getText();
+        
+        // Validaciones para los campos
+        if(nombre.isEmpty()||apellidoP.isEmpty()||apellidoM.isEmpty()||domicilio.isEmpty()||telefono.isEmpty()){
+            UIManager.put("OptionPane.messageFont", new Font("Arial", Font.BOLD, 14)); 
+            UIManager.put("OptionPane.messageForeground", Color.BLUE); 
+            UIManager.put("Panel.background", Color.GREEN);
+            JOptionPane.showMessageDialog(this, "Ingresar todos los campos \n","AVISO",JOptionPane.ERROR_MESSAGE);
+            txtNombreclienteR.requestFocus();
+            return;
+        }
+        
+        user.setName(nombre);
+        user.setLastNameP(apellidoP);
+        user.setLastNameM(apellidoM);
+        user.setDomicilio(domicilio);
+        user.setTel(telefono);
         
         try {
             DAOUsers dao = new DAOUsersImpl();
             dao.registrar(user);
-            System.out.println("Usuario registrado 1");
+            JOptionPane.showMessageDialog(this, "Usuario registrado con éxito \n","AVISO",JOptionPane.INFORMATION_MESSAGE);
+            
+            txtNombreclienteR.setText("");
+            txtApellidoPClienteR.setText("");
+            txtApellidoMaternoClienteR.setText("");
+            txtDireccionClienteR.setText("");
+            txtTelefonoClienteR.setText("");
         } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "No se registro a cliente  \n","AVISO",JOptionPane.ERROR_MESSAGE);
             System.out.println(e.getMessage());
+            
         }
         
     }//GEN-LAST:event_btnRegistrarClienteActionPerformed

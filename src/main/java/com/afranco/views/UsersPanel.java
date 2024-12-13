@@ -1,12 +1,28 @@
 package com.afranco.views;
 
+import com.afranco.ilib.DAOUsersImpl;
 import com.afranco.ilib.Dashboard;
+import com.afranco.interfaces.DAOUsers;
+import com.afranco.models.Users;
+import java.util.List;
+import javax.swing.JOptionPane;
 
 public class UsersPanel extends javax.swing.JPanel {
     
     public UsersPanel(Dashboard dashboard) {///
         initComponents();
         this.dashboard = dashboard;
+        LoadUsers();
+    }
+    
+    private void LoadUsers(){
+        try {
+            DAOUsers dao = new DAOUsersImpl();
+            dao.listar().forEach((u) -> System.out.println(u.getName()));
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        
     }
     private Dashboard dashboard;
     @SuppressWarnings("unchecked")
