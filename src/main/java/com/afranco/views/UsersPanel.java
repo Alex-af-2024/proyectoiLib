@@ -6,6 +6,7 @@ import com.afranco.interfaces.DAOUsers;
 import com.afranco.models.Users;
 import java.util.List;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 public class UsersPanel extends javax.swing.JPanel {
     
@@ -13,12 +14,14 @@ public class UsersPanel extends javax.swing.JPanel {
         initComponents();
         this.dashboard = dashboard;
         LoadUsers();
+        txtSearchUsers.putClientProperty("JTextField.placeHolderText", "Ingrese nombre de usuario a buscar");
     }
     
     private void LoadUsers(){
         try {
-            DAOUsers dao = new DAOUsersImpl();
-            dao.listar().forEach((u) -> System.out.println(u.getName()));
+            DAOUsers dao = new DAOUsersImpl(); // clase impl conintiene la consulta
+            DefaultTableModel model = (DefaultTableModel) jTableUsuariosPanel.getModel();
+            dao.listar().forEach((u) -> model.addRow(new Object[]{u.getId(), u.getName(),u.getLastNameP(),u.getLastNameM(),u.getDomicilio(),u.getTel()}));
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
@@ -32,7 +35,7 @@ public class UsersPanel extends javax.swing.JPanel {
         panel1 = new java.awt.Panel();
         jLabel1 = new javax.swing.JLabel();
         btnBuscarUsuario = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
+        txtSearchUsers = new javax.swing.JTextField();
         btnUsuarioNuevo = new javax.swing.JButton();
         btnEditarUsuario = new javax.swing.JButton();
         btnBorrarUsuario = new javax.swing.JButton();
@@ -48,6 +51,17 @@ public class UsersPanel extends javax.swing.JPanel {
         btnBuscarUsuario.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnBuscarUsuario.setForeground(new java.awt.Color(0, 0, 0));
         btnBuscarUsuario.setText("Buscar");
+        btnBuscarUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuscarUsuarioActionPerformed(evt);
+            }
+        });
+
+        txtSearchUsers.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtSearchUsersActionPerformed(evt);
+            }
+        });
 
         btnUsuarioNuevo.setBackground(new java.awt.Color(204, 204, 204));
         btnUsuarioNuevo.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -68,41 +82,17 @@ public class UsersPanel extends javax.swing.JPanel {
         btnBorrarUsuario.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnBorrarUsuario.setForeground(new java.awt.Color(0, 0, 0));
         btnBorrarUsuario.setText("Borrar");
+        btnBorrarUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBorrarUsuarioActionPerformed(evt);
+            }
+        });
 
         jTableUsuariosPanel.setBackground(new java.awt.Color(255, 255, 255));
         jTableUsuariosPanel.setForeground(new java.awt.Color(0, 0, 0));
         jTableUsuariosPanel.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+
             },
             new String [] {
                 "Id", "Nombre", "Apellid P.", "Apellido M.", "Direccíon", "Teléfono"
@@ -132,7 +122,7 @@ public class UsersPanel extends javax.swing.JPanel {
                             .addGroup(panel1Layout.createSequentialGroup()
                                 .addComponent(jLabel1)
                                 .addGap(18, 18, 18)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 469, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtSearchUsers, javax.swing.GroupLayout.PREFERRED_SIZE, 469, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
                                 .addComponent(btnBuscarUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGap(32, 32, 32))
@@ -143,7 +133,7 @@ public class UsersPanel extends javax.swing.JPanel {
                 .addGap(17, 17, 17)
                 .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtSearchUsers, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnBuscarUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(12, 12, 12)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -171,6 +161,27 @@ public class UsersPanel extends javax.swing.JPanel {
        dashboard.showJPanel(new UpUser());
     }//GEN-LAST:event_btnUsuarioNuevoActionPerformed
 
+    private void btnBuscarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarUsuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnBuscarUsuarioActionPerformed
+
+    private void txtSearchUsersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSearchUsersActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtSearchUsersActionPerformed
+
+    private void btnBorrarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarUsuarioActionPerformed
+        DAOUsers dao = new DAOUsersImpl();
+        DefaultTableModel model = (DefaultTableModel) jTableUsuariosPanel.getModel();
+        for( int i: jTableUsuariosPanel.getSelectedRows()){
+            try {
+                dao.eliminar((int) jTableUsuariosPanel.getValueAt(i, 0));
+                model.removeRow(i);
+            }catch (Exception e) {
+                System.out.println(e.getMessage());
+            } 
+        }        
+    }//GEN-LAST:event_btnBorrarUsuarioActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBorrarUsuario;
@@ -180,8 +191,8 @@ public class UsersPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTableUsuariosPanel;
-    private javax.swing.JTextField jTextField1;
     private java.awt.Panel panel1;
+    private javax.swing.JTextField txtSearchUsers;
     // End of variables declaration//GEN-END:variables
 
     private Object Dashboard() {
