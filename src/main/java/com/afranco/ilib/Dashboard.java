@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package com.afranco.ilib;
 
 import com.afranco.views.*;
@@ -25,15 +22,8 @@ import java.util.Locale;
 import javax.swing.JPanel;
 import javax.swing.UIManager;
 
-/**
- *
- * @author Alejandro
- */
-public class Dashboard extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Dashboard
-     */
+public class Dashboard extends javax.swing.JFrame {
     public Dashboard() {
         initComponents();
         InitStyles();

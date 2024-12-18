@@ -77,6 +77,11 @@ public class UsersPanel extends javax.swing.JPanel {
         btnEditarUsuario.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnEditarUsuario.setForeground(new java.awt.Color(0, 0, 0));
         btnEditarUsuario.setText("Editar");
+        btnEditarUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEditarUsuarioActionPerformed(evt);
+            }
+        });
 
         btnBorrarUsuario.setBackground(new java.awt.Color(204, 204, 204));
         btnBorrarUsuario.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -181,6 +186,14 @@ public class UsersPanel extends javax.swing.JPanel {
             } 
         }        
     }//GEN-LAST:event_btnBorrarUsuarioActionPerformed
+
+    private void btnEditarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarUsuarioActionPerformed
+        if(jTableUsuariosPanel.getSelectedRow() > -1){
+            int userId = (int) jTableUsuariosPanel.getValueAt(jTableUsuariosPanel.getSelectedRow(),0);
+        } else{
+            
+        }
+    }//GEN-LAST:event_btnEditarUsuarioActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

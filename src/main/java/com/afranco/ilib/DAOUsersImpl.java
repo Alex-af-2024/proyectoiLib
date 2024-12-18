@@ -31,17 +31,29 @@ public class DAOUsersImpl extends DataBase implements DAOUsers{
 
     @Override
     public void modificar(Users user) throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        try {
+            this.Conectar();
+            PreparedStatement st = this.conexion.prepareStatement("UPDATE users SET `name` = ?, `lastNameP` = ?, `lastNameM` = ?, `domicilio` = ?, `tel` = ? WHERE Id = ?;");  /*, `sanctions` = ?, `sanc_money` = ? */
+            st.setString(1, user.getName());
+            st.setString(2, user.getLastNameP());
+            st.setString(3, user.getLastNameM());
+            st.setString(4, user.getDomicilio());
+            st.setString(5, user.getTel());
+            st.setInt(6, user.getId());
+            st.executeUpdate();
+            st.close();
+        } catch (Exception e) {
+        }
     }
 
     @Override
-    public void eliminar(int userId) throws Exception {
+    public void eliminar(int userId) throws Exception {//diseñado para eliminar un registro de DDBB
         try {
             this.Conectar();
             PreparedStatement st = this.conexion.prepareStatement("DELETE FROM users WHERE id = ?;");
-            st.setInt(1, userId);
-            st.executeUpdate();
-            st.close();
+            st.setInt(1, userId); //Establece valor ? a userId, si ubieran más se hace lo mismo.
+            st.executeUpdate(); //ejecuta 
+            st.close(); // libera recursos al cerrar.
         } catch (Exception e) {
             throw e;
         } finally{

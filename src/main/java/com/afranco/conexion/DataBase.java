@@ -6,7 +6,6 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-
 public class DataBase {
     protected Connection conexion;
     private final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
@@ -30,7 +29,6 @@ public class DataBase {
         if(conexion != null){
             if(!conexion.isClosed()){
                 conexion.close();
-                
             }
         }
     }
